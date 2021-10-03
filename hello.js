@@ -9,23 +9,31 @@ app.use(express.static('public'));
 app.use(morgan('common'));
 
 app.get('/', (req, res) => {
-  res.redirect('/english');
+  res.redirect('/english')
 });
 
 app.get('/english', (req, res) => {
-  res.render('hello-world-english');
+  res.render('hello-world-english', {
+    currentLinkIsEnglish : 'current',
+  });
 });
 
 app.get('/spanish', (req, res) => {
-  res.render('hello-world-spanish');
+  res.render('hello-world-spanish', {
+    currentLinkIsSpanish : 'current',
+  });
 });
 
 app.get('/french', (req, res) => {
-  res.render('hello-world-french');
+  res.render('hello-world-french', {
+    currentLinkIsFrench : 'current',
+  });
 });
 
 app.get('/serbian', (req, res) => {
-  res.render('hello-world-serbian');
+  res.render('hello-world-serbian', {
+    currentLinkIsSerbian : 'current',
+  });
 });
 
 app.listen(3000, 'localhost', () => {

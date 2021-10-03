@@ -1,7 +1,7 @@
 extends layout
 
 block page_title
-  title Ово је наслов странице
+  title Este es el título de la página.
 
 block navigation_links
   ul
@@ -16,21 +16,21 @@ block navigation_links
                 alt="Drapeau de la france"
                 title="Aller sur le site français")
     li
-      a.current(href="/serbian")
+      a(href="/serbian")
         img.flag(src="/images/flag-of-Serbia.png"
                 alt="Застава Србије"
                 title="Идите на српски сајт")
     li
-      a(href="/spanish")
+      a.current(href="/spanish")
         img.flag(src="/images/flag-of-Spain.png"
                 alt="Bandera de españa"
                 title="Ir al sitio en español")
 
 block greeting
-  h1 Здраво свете! 
+  h1 Hola El Mundo!
 
 block software_engineer
-  p Ускоро ћу бити софтверски инжењер!
+  p ¡Pronto seré ingeniero de software!
   img(src="/images/earth.jpeg"
-    alt="Планета Земља"
-    title="Планета Земља")
+    alt="El Mundo"
+    title="El Mundo")
